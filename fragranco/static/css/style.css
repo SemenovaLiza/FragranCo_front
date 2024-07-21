@@ -117,7 +117,7 @@ section{
 .products .box-container .box .discount{
     position: absolute;
     top: 1rem; left: 1rem;
-    padding: 7rem 1rem;
+    padding: .7rem 1rem;
     font-size: 2rem;
     color: var(--pink);
     background: rgba(255, 51, 153, .05);
@@ -192,7 +192,6 @@ section{
     font-weight: lighter;
     text-decoration: line-through;
 }
-
 
 @media (max-width:991px) {
     html{
