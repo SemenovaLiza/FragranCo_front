@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FragranCo</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/front-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <header>
+            <input type="checkbox" name="" id="toggler">
+            <label for="toggler" class="fas fa-bars"></label>
+            <a href="#" class="logo">FrangranCo<span>.</span></a>
+            <nav class="navbar">
+                <a href="#home">home</a>
+                <a href="#home">products</a>
+                <a href="#home">most popular</a>
+                <a href="#home">contact</a>
+            </nav>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+            </div>
+        </header>
+        <section class="home" id="home"></section>
+
+        <section class="products" id="products">
+            <h1 class="heading"> latest <span>products</span> </h1>
+            <div class="box-container">
+
+                <div class="box">
+                    <span class="discount">-10%</span>
+                    <div class="image">
+                        <img src="{% static 'img/test_photo.jpg'%}" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>flower pot</h3>
+                        <div class="price"> $12.00 <span>$15.99</span> </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <span class="discount">-10%</span>
+                    <div class="image">
+                        <img src="{% static 'img/test_photo.jpg'%}" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="cart-btn">add to cart</a>
+                            <a href="#" class="fas fa-share"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>flower pot</h3>
+                        <div class="price"> $12.00 <span>$15.99</span> </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </body>
+</html>
