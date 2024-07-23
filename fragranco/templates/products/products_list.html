@@ -35,7 +35,10 @@
                         <span class="discount">-10%</span>
                         <a href="{% url 'products:product_detail' product.id %}">
                             <div class="image">
-                                <img src="{% static 'img/image1.jpg' %}">
+                                {% load thumbnail %}
+                                {% thumbnail product.image "100x100" crop="center" as im %}
+                                    <img src="{{ im.url }}">
+                                {% endthumbnail %}
                                 <div class="icons">
                                     <a href="#" class="cart-btn">add to cart</a>
                                     <a href="#" class="fas fa-share"></a>
