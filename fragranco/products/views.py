@@ -9,3 +9,12 @@ def index(request):
     }
     template = 'products/products_list.html'
     return render(request, template, context)
+
+
+def product_detail(request, product_id):
+    product = Products.objects.get(id=product_id)
+    context = {
+        'product': product,
+    }
+    template = 'products/product_detail.html'
+    return render(request, template, context)

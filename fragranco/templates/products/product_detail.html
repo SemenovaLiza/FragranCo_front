@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FragranCo</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/front-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <header>
+            <input type="checkbox" name="" id="toggler">
+            <label for="toggler" class="fas fa-bars"></label>
+            <a href="{% url 'products:index' %}" class="logo">FrangranCo<span>.</span></a>
+            <nav class="navbar">
+                <a href="#home">home</a>
+                <a href="#home">products</a>
+                <a href="#home">most popular</a>
+                <a href="#home">contact</a>
+            </nav>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+            </div>
+        </header>
+        <section class="home" id="home"></section>
+
+        <section class="product_detail" id="product_detail">
+            <h1 class="heading"> <span> contact </span> </h1>
+            <div class="row">
+                <form action="">
+                    <input type="text" placeholder="name" class="box">
+                    <input type="text" placeholder="no name" class="box">
+                    <input type="text" placeholder="again" class="box">
+                    <textarea name="" class="box" placeholder="message" id="" cols="30" rows="10"></textarea>
+                </form>
+                <div class="image">
+                    <img src="{% static 'img/image1.jpg' %}">
+                </div>
+            </div>
+
+        </section>    
+
+    </body>
+</html>
