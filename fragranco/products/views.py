@@ -22,8 +22,10 @@ def product_detail(request, product_id):
 
 def get_me(request):
     user = request.user
+    bought_products = user.bought_products.all()
     context = {
-        'user': user
+        'user': user,
+        'bought_products': bought_products,
     }
     template = 'users/profile.html'
     return render(request, template, context)
@@ -34,7 +36,7 @@ def get_profile_id(request, user_id):
     bought_products = user.bought_products.all()
     context = {
         'user': user,
-        'products': bought_products,
+        'bought_products': bought_products,
     }
     template = 'users/profile.html'
     return render(request, template, context)

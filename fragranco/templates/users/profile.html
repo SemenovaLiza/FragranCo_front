@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>FragranCo</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/front-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
     </head>
     <body>
@@ -27,49 +27,39 @@
         <section class="home" id="home"></section>
 
         <section class="product_detail" id="product_detail">
-            <h3> {{ user.username }} </h3>
+            <h3> fsfsfssfsf </h3>
             <div class="row">
                 <div class="image">
                     <img src="{% static 'img/image1.jpg' %}">
                 </div>
-                <article>
-                    dddddd
-                </article>
-                
-            </div>
-
-        </section>
-        <section class='review' id='review'>
-            <h1 class='heading'> custom <span> review</span> </h1>
-            <div class='box-container'>
-                <div class='box'>
-                    <p>fjfjfjfjfjf</p>
-                    <div class='user'>
-                        <img src='{% static 'img/image1.jpg' %}'>
-                        <div class='user-info'>
-                            <h3>{{ user.username }}</h3>
-                            <span>happy custoner</span>
-                        </div>
-                    </div>
-                </div>
-                <div class='box'>
-                    <p>fjfjfjfjfjf</p>
-                    <div class='user'>
-                        <img src='{% static 'img/image1.jpg' %}'>
-                        <div class='user-info'>
-                            <h3>{{ user.username }}</h3>
-                            <span>happy custoner</span>
-                        </div>
-                    </div>
-                </div>
-                <div class='box'>
-                    <p>fjfjfjfjfjf</p>
-                    <div class='user'>
-                        <img src='{% static 'img/image1.jpg' %}'>
-                        <div class='user-info'>
-                            <h3>{{ user.username }}</h3>
-                            <span>happy custoner</span>
-                        </div>
+                <div class='review'>
+                    <h1 class='heading'> review <span> haha </span> </h1>
+                    <div class='box-container'>
+                        {% for product in bought_products %}
+                            <div class='box'>
+                                <div class='stars'>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                </div>
+                                <p>{{ product.title }}</p>
+                                <article>nanananfskfskfsfsf</article>
+                                {% load thumbnail %}
+                                {% thumbnail product.image "100x100" crop="center" as im %}
+                                    <img src="{{ im.url }}">
+                                {% endthumbnail %}
+                                <div class='user'>
+                                    <img src={% static 'img/image1.jpg' %}>
+                                    <div class='user-info'>
+                                        <h3>craaazy</h3>
+                                        <span>happy customer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        
                     </div>
                 </div>
             </div>
