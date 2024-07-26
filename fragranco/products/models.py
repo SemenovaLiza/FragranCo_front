@@ -15,6 +15,13 @@ class Products(models.Model):
         upload_to='products/',
         blank=True, null=True
     )
+    buyers = models.ForeignKey(
+        User,
+        blank=True,
+        null=True,
+        on_delete=models.SET_NULL,
+        related_name='bought_products'
+    )
 
 
     class Meta:

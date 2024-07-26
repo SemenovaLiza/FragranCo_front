@@ -29,15 +29,15 @@
         <section class="product_detail" id="product_detail">
             <h3> {{ product.title }} </h3>
             <div class="row">
-                <article>
-                    {{ product.description }}
-                </article>
                 <div class="image">
                     {% load thumbnail %}
                     {% thumbnail product.image "100x100" crop="center" as im %}
                         <img src="{{ im.url }}">
                     {% endthumbnail %}
                 </div>
+                <article>
+                    {{ product.description }}
+                </article>
             </div>
 
         </section>    
