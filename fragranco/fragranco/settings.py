@@ -13,7 +13,6 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'comments.apps.CommentsConfig',
     'products.apps.ProductsConfig',
-    'users.apps.UsersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -23,7 +22,6 @@ INSTALLED_APPS = [
     'sorl.thumbnail',
 ]
 
-AUTH_USER_MODEL = 'users.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -67,6 +65,10 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+LOGIN_URL = 'users:login'
+LOGIN_REDIRECT_URL = 'products:index'
 
 
 # Password validation

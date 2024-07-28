@@ -16,7 +16,7 @@
             <a href="{% url 'products:index' %}" class="logo">FrangranCo<span>.</span></a>
             <nav class="navbar">
                 <a href="{% url 'products:index' %}">home</a>
-                <a href="#home">products</a>
+                <a href="{% url 'products:index' %}">products</a>
                 <a href="#home">most popular</a>
                 <a href="#home">contact</a>
             </nav>
@@ -24,7 +24,10 @@
                 <a href="#" class="fas fa-heart"></a>
             </div>
         </header>
-        <div class="row justify-content-center">
+        <section class="home" id="home"></section>
+
+        <section class='content' id='content'>
+          <div class="row justify-content-center">
             <div class="col-md-8 p-5">
               <div class="card">
                 <div class="card-header">
@@ -38,5 +41,7 @@
               </div> <!-- card -->
             </div> <!-- col -->
           </div> <!-- row -->
+        </section>
+        
     </body>
 </html>
