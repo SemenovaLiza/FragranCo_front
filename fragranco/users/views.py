@@ -16,6 +16,7 @@ class Login(LoginView):
     success_url = reverse_lazy('products:index')
     template_name = 'users/login.html'
 
+
 class PasswordChange(PasswordChangeView):
     form_class = PasswordChange
     template_name = 'users/password_change_form.html'

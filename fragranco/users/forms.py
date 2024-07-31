@@ -36,4 +36,3 @@ class PasswordChange(PasswordChangeForm):
         widget=forms.PasswordInput(attrs={'placeholder': 'new passworod'}))
     new_password2 = forms.CharField(
         widget=forms.PasswordInput(attrs={'placeholder': 'new passworod confirmation'}))
-    
